@@ -1,0 +1,25 @@
+server:
+  port: 8090
+
+spring:
+  #  autoconfigure:
+  #    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+  #  security:
+  #    basic:
+  #      enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5444/mega_chat
+    username: postgres
+    password: 123
+  liquibase:
+    change-log: classpath:db/changelog/changelog.xml
+
+application:
+  security:
+    jwt:
+      secret-key: 05083650b2a596f9f263ac3b28295fca0444b0b9771b64c93b963fdd5822ec01
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+springdoc:
+  swagger-ui:
