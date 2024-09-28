@@ -34,6 +34,7 @@ public class SecurityConfiguration {
             "/swagger-ui.html",
             "/api/auth/**",
             "/api/auth/check-username/**",
+            "/ws/**"
     };
 
     private static final String[] USER_ACCESS_LIST = {
